@@ -27,10 +27,9 @@ public class Setup {
         try {
             Connection conn = getConnection();
             String[] query = new String[20];
-            query[0]="use visionplanner;";
-            query[1]="create table userdata (uniqueid int, username varchar(20), userpassword varchar(20), useremail varchar(30));";
-            query[2]="create table eventlist (uniqueid int, eventname varchar(120), eventdesc varchar(400), eventstart datetime, eventend datetime);";
-            query[3]="create table moodlist( uniqueid int, mooddate date, mood varchar(20), color varchar(7), daydesc varchar(400));";
+            query[0]="create table userdata (uniqueid int, username varchar(20), userpassword varchar(20), useremail varchar(30));";
+            query[1]="create table eventlist (uniqueid int, eventname varchar(120), eventdesc varchar(400), eventstart datetime, eventend datetime);";
+            query[2]="create table moodlist( uniqueid int, mooddate date, mood varchar(20), color varchar(7), daydesc varchar(400));";
             for(int i=0; i<4; i++){
                 PreparedStatement ps = conn.prepareStatement(query[i]);
                 if(ps.executeUpdate()>0){

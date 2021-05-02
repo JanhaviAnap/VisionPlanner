@@ -44,3 +44,5 @@ insert into moodlist values(552266,"2021-03-005","none","#FFFFFF","nm");
 drop table moodlist;
 update moodlist set mood="happy",color="#F9A7B0",daydesc="something did happen" where uniqueid=552266;
 select mooddate,mood,daydesc from moodlist  where year(mooddate)=2021 and uniqueid=552266 order by mooddate;
+
+
