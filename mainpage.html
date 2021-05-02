@@ -138,7 +138,14 @@
           color:white;
           /*pointer:cursor;*/
         }
-        </style>
+        .row{display: flex;}
+        .col-1{
+            flex: 30%;
+        }
+        .col-2{
+            flex: 70%;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -150,88 +157,90 @@
         <a href="moodtracker.html">MoodTracker</a>
         <button class="button button5">P</button>
     </div>
+    <h2>12 MARCH</h2>
+    <h5>Tuesday, 2021</h5>
+    <br>
     <div class="row">
-        <div class="col">
-            <h2>12 MARCH</h2>
-            <h5>Tuesday, 2021</h5>
+        <div class="col-1">
+            <h3>Today's Tasks</h3>
+            <br>
+            <p>
+                <label>View For:</label>
+                <select name="view" id="view">
+                    <option class="select" value="select">Select</option>
+                    <option class="self" value="self">Self</option>
+                    <option class="other" value="other">Other</option>
+                </select> 
+            </p>
+            <br>
+            <p>
+                <label>View Schedule For:</label>    
+                <select name="viewSchedule" id="viewSchedule">     
+                    <option class="select" value="select">Select</option>
+                    <option class="year" value="year">Year</option>
+                    <option class="month1" value="month">Month</option>
+                    <option class="date" value="date">Date</option>
+                    <option class="today" value="today">Today</option>
+                </select> 
+            </p>
+        </div>
+        <div class="col-2">
+            <div class="col-2">
+                <div class="month">      
+                    <ul>
+                        <li class="prev">&#10094;</li>
+                        <li class="next">&#10095;</li>
+                        <li>
+                            MARCH<br>
+                            <span style="font-size:18px">2021</span>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="weekdays">
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                    <li>Su</li>
+                </ul>
+                <ul class="days">  
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li><span class="active">12</span></li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                    <li>31</li>
+                </ul>
+            </div>
         </div>
     </div> 
-    <div class="main">
-        <div class="month">
-            <ul>
-                <li class="prev">&#10094;</li>
-                <li class="next">&#10095;</li>
-                <li>
-                  MARCH<br>
-                  <span style="font-size:18px">2021</span>
-                </li>
-            </ul>
-        </div>
-        <ul class="weekdays">
-            <li>Mo</li>
-            <li>Tu</li>
-            <li>We</li>
-            <li>Th</li>
-            <li>Fr</li>
-            <li>Sa</li>
-            <li>Su</li>
-        </ul>
-        <ul class="days">  
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li><span class="active">12</span></li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
-        </ul>
-    </div>
-    <div class="footer">
-        <h3>Today's Tasks</h3>
-        <br>
-        <p>
-            <label>View For:</label>
-            <select name="view" id="view">
-                <option class="select" value="select">Select</option>
-                <option class="self" value="self">Self</option>
-                <option class="other" value="other">Other</option>
-            </select> 
-        </p>
-        <br>
-        <p>
-            <label>View Schedule For:</label>    
-            <select name="viewSchedule" id="viewSchedule">     
-                <option class="select" value="select">Select</option>
-                <option class="year" value="year">Year</option>
-                <option class="month1" value="month">Month</option>
-                <option class="date" value="date">Date</option>
-                <option class="today" value="today">Today</option>
-            </select> 
-        </p>
-    </div>
+    
 </body>
 </html>
