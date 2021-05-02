@@ -126,42 +126,15 @@ float:right;
   font-size: 14px;
   margin: 10px 10px;
   border-radius: 50%;
-  /*float: right;*/
+  float: right;
 }
 
 .button:hover {
   background-color: black;
   color:white;
-  /*pointer:cursor;*/
+  pointer:cursor;
 }
 
-.select{
-             background-color:#FFFFFF;
-	}
-.happy{
-             background-color:#F9A7B0;
-	}
-.gloomy{
-             background-color:#614051;
-	}
-.humorous{
-             background-color:#FFFF00;
-	}
-.calm{
-             background-color:#7FFFD4;
-	}
-.lighthearted{
-             background-color:#FFDFDD;
-	}
-.angry{
-             background-color:#800517;
-	}
-.cheerful{
-             background-color:#FF8040;
-	}
-.lonely{
-             background-color:#493D26;
-	}	
 
 
 </style>
@@ -169,10 +142,10 @@ float:right;
 <body>
 
 <div class="navbar">
-<a href="homepage.html"><img src="assets/img/VisionPlannerLogo.jpeg" style="float:left; width:20px; height:20px;"></a>
+<a href="homepage.html"><img src="assets/img/VisionPlannerLogo.jpeg" style="float:left; width:20px; height=20px;"></a>
   <a href="mainpage.html">Classical</a>
   <a href="#">Fianancial</a>
-  <a href="mood.html">MoodTracker</a>
+  <a href="moodtracker.html">MoodTracker</a>
   <button class="button button5">P</button>
 </div>   
         
@@ -180,7 +153,8 @@ float:right;
 <div class="col">
            <h2>12 MARCH</h2>
           <h5>Tuesday, 2021</h5>
- <div>     
+</div>     
+</div>
 <div class="main">
 
 
@@ -243,38 +217,45 @@ float:right;
 
 
 <div class="footer">
+<h3>Todays Tasks:</h3>
 <br>
-<div class="col1">
-    <h2>Vision Planner</h2>
+<p>
+  <label for="view for">View For:</label>
+  
+        
+   <select name="view" id="view">
+       
+  <option class="select" value="select">Select</option>
+        
+  <option class="self" value="self">Self</option>
+        
+  <option class="other" value="other">Other</option>
+       
+  </select> 
     
-   <label for="mood">How are you feeling today?</label>
-
-
-<select name="mood" id="mood">
-
-<option class="select" value="select">Select</option>
-
-<option class="happy" value="happy">Happy</option>
-
-<option class="gloomy" value="gloomy">Gloomy</option>
-
-<option class="humorous" value="humorous">Humorous</option>
-
-<option class="calm" value="calm">Calm</option>
-
-<option class="lighthearted" value="lighthearted">Lighthearted</option>
-
-<option class="angry" value="angry">Angry</option>
-
-<option class="cheerful" value="cheerful">Cheerful</option>
-
-<option class="lonely" value="lonely">Lonely</option>
-</select>
-
-   
-
-
+</p>
+<br>
+  <p>
+    <label for="view for">View Schedule For:</label>
+    
+          
+     <select name="viewSchedule" id="viewSchedule">
+         
+    <option class="select" value="select">Select</option>
+          
+    <option class="year" value="year">Year</option>
+          
+    <option class="month1" value="month">Month</option>
+         
+    <option class="date" value="date">Date</option>
+          
+    <option class="today" value="today">Today</option>
+          
+    
+          
+    </select> 
+      
+  </p>
 </div>
-
 </body>
 </html>

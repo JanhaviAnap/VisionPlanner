@@ -1,120 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Vision Planner</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Planner</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form {
+            border: 3px solid #f1f1f1;
+        }
+        input[type=text], input[type=password] {
 
-input[type=text], input[type=password] {
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
 
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-  
-  
-}
+        button {
+            background-color:green;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: auto;
+        }
 
-button {
-  background-color:green;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: auto;
-}
-
-button:hover {
-  background-color:white;
-  color:black;
-}
-
-
-.container {
-  background-color:#9d9dff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-  padding: 16px;
-}
+        button:hover {
+            background-color:white;
+            color:black;
+        }
 
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     float:left;
-     width: 100%;
-  }
-}
+        .container {
+            background-color:#9d9dff;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+            padding: 16px;
+        }
 
-.main {
- text-align:center;
-}
-footer {
- text-align:center;
- background-color:#202020;
- color:white;
- position:absolute;
-  bottom: 0;
- width:100%;
-}
 
-</style>
-<script>
-function myFunction() {
-  location.replace("mainpage.html")
-}
-</script>
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                float:left;
+                width: 100%;
+            }
+        }
+
+        .main {
+            text-align:center;
+        }
+        footer {
+            text-align:center;
+            background-color:#202020;
+            color:white;
+            position:absolute;
+            bottom: 0;
+            width:100%;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            location.replace("mainpage.html")
+        }
+    </script>
 </head>
 <body>
-<div>
-<p style="text-align:center">
-
-
-<h2 style="text-align:center;">Login Form</h2>
-</p>
-</div>
-<div class="main">
-<form action="/action_page.php" method="get">
- 
-
-  <div class="container">
-    <label for="uname" style="color:white;"><b>UserEmail</b></label><br>
-    <input type="text" placeholder="Enter Email" name="uname" required>
-    <br><br>
-    <label for="psw"  style="color:white;"><b>Password</b></label><br>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <div>
+        <p style="text-align: center;">Login Form</p>
+    </div>
+    <div class="main">
+        <form action="/action_page.php">
+            <div class="container">
+                <label style="color: white;"><b>UserEmail</b></label><br><!--for="uname"-->
+                <input type="text" placeholder="Enter Email" name="uname" required>
+                <br>
+                <label style="color:white;"><b>Password</b></label><br><!--for="psw"-->
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <div>
+                    <button type="submit" onclick="myFunction()">Login</button>
+                    <button type="button" class="button">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <br>
+        <p>&copy; VisionPlanner 2021</p>
+        <p>Made with all the hardwork by J,R,N & N</P>
         
-    
-   <div>
-    <button type="submit" onclick="myFunction()">Login</button>
-    <button type="button" class="button">Cancel</button>
-  </div> 
-    
-  </div>
-
- 
-</form>
-</div>
-
-<footer>
-<br>
-<p>&copy VisionPlanner 2021</p>
-<p>Made with all the hardwork by J,R,N & N</P>
-
-</footer>
-
+        </footer>
 </body>
 </html>
