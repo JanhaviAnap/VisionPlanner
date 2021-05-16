@@ -1,8 +1,10 @@
 //package backendJava;
 
 import java.sql.*;
-import java.util.Vector;
+import java.util.*;
 import java.time.*;
+import java.time.format.DateTimeFormatter;
+
 
 public class UserEventAction {
     public static boolean addEvent(int uniqueid,String eventname,String eventdesc,String eventstart, String eventend) {
@@ -162,5 +164,40 @@ public class UserEventAction {
             e.printStackTrace();
         }
         return schedule;
+    }
+
+    public static Vector<String> viewEvents(int selfuid,int uid,String date,String vtype){
+    	Vector<String> schedule = new Vector<String>();
+    	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH);
+    	LocalDate d = LocalDate.now();
+    	if(date!=null)
+    		d = LocalDate.parse(date, formatter);
+    	int day = d.getDayOfMonth();
+    	int month = d.getMonthValue();
+    	int year = d.getYear();
+    	try {
+    		if(vtype.equals("yearly")) {
+    			if(selfuid==uid) {
+    				schedule = viewEventFromYearForSelf(uid,year);
+    			}else {
+    				schedule = viewEventFromYear(uid,year);
+    			}
+    		}else if(vtype.equals("monthly")) {
+    			if(selfuid==uid) {
+    				schedule = viewEventFromYearMonthForSelf(uid,year,month);
+    			}else {
+    				schedule = viewEventFromYearMonth(uid,year,month);
+    			}
+    		}else{
+    			if(selfuid==uid) {
+    				schedule = viewEventFromYearMonthDateForSelf(uid,year,month,day);
+    			}else {
+    				schedule = viewEventFromYearMonthDate(uid,year,month,day);
+    			}
+    		}
+    	}catch(Exception e) {
+    		e.printStackTrace();
+    	}
+    	return schedule;
     }
 }

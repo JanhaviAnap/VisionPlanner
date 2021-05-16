@@ -1,7 +1,7 @@
 //package backendJava;
 
 import java.util.Scanner;
-//import front.UserAction;
+//import backend.UserAction;
 import java.util.Vector;
 
 public class Main {
@@ -360,12 +360,40 @@ public class Main {
             e.printStackTrace();
         } 
     }
+    public static void testViewEvents() {
+        System.out.println("\nTesting view events");
+        try{
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("Enter your email: ");
+            String selfemail = sc.nextLine();
+            int selfuid = UserAction.getUniqueIdFromDB(selfemail);
+
+            System.out.println("Enter else email: ");
+            String elseemail = sc.nextLine();
+            int elseuid = UserAction.getUniqueIdFromDB(elseemail);
+
+            System.out.println("Enter date  in yyyy-mm-dd format: ");
+            String date = sc.nextLine();
+
+            System.out.println("Enter view type: ");
+            String type = sc.nextLine();
+
+            Vector<String> schedule = new Vector<String>();
+            schedule = UserEventAction.viewEvents(selfuid,elseuid,date,type);
+            for (String line : schedule) {
+                System.out.println(line);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) throws Exception {
         try{
             // //testing methods from UserAction.java
             // testLoginWithEmail();
-            // testSignUp();
+             testSignUp();
             // testGetUniqueIdFromDB();
             // testGetUserDataFromDB();
 
@@ -386,6 +414,8 @@ public class Main {
             // testViewMoodFromYearMonth();
             // testViewMoodFromYearMonthDate();
             // testviewMoodForToday();
+
+            testViewEvents();
 
         }catch(Exception e){
             e.printStackTrace();
